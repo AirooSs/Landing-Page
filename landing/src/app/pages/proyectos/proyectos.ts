@@ -22,24 +22,34 @@ export class ProyectosComponent {
       destacado: false
     },
     {
-      nombre: 'API Gestión de Productos',
-      descripcion: 'Aplicación fullstack para la gestión de un catálogo de productos. Frontend en Angular con Bootstrap consumiendo una API REST con operaciones CRUD completas y componentes reutilizables.',
+      nombre: 'TFC - Tienda de Ropa Online',
+      descripcion: 'Aplicación fullstack para la organización de una tienda de ropa online. Frontend en Angular con Backend en Bootstrap consumiendo una API REST con operaciones CRUD completas y componentes reutilizables.',
       tipo: 'Fullstack',
-      tags: ['Angular', 'Bootstrap', 'TypeScript', 'Node.js'],
+      tags: ['Angular', 'Bootstrap', 'TypeScript'],
       icono: 'bi-box-seam',
       color: 'verde',
-      github: 'https://github.com/AirooSs/API-PRODUCTOS',
+      github: 'https://github.com/AirooSs/TFC-Tienda-de-ropa',
       destacado: false
     },
     {
-  nombre: 'Mimesis Lab',
-  descripcion: 'Plataforma clínica de investigación psicológica. Durante las prácticas trabajé en la integración de módulos Python con NestJS, CI/CD con GitHub Actions y la integración de Azure OpenAI (GPT y Whisper), a su vez integrado con el HPC de Castilla y León.',
-  tipo: 'Prácticas fullstack',
-  tags: ['Angular', 'NestJS', 'Node.js', 'PostgreSQL', 'Azure'],
-  icono: 'bi-building',
-  color: 'morado',
-  github: null,
-  destacado: false
-}
+      nombre: 'Mimesis Lab',
+      descripcion: 'Plataforma clínica de investigación psicológica. Durante las prácticas trabajé en la integración de módulos Python con NestJS, CI/CD con GitHub Actions y la integración de Azure OpenAI (GPT y Whisper), a su vez integrado con el HPC de Castilla y León.',
+      tipo: 'Prácticas fullstack',
+      tags: ['Angular', 'NestJS', 'Node.js', 'PostgreSQL', 'Azure'],
+      icono: 'bi-building',
+      color: 'morado',
+      github: null,
+      destacado: true
+    }
   ];
+
+  imagenSeleccionada: string | null = null;
+
+  abrirImagen(imagen: string): void {
+    this.imagenSeleccionada = imagen;
+  }
+
+  cerrarImagen(): void {
+    this.imagenSeleccionada = null;
+  }
 }

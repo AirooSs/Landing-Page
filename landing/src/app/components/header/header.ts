@@ -11,9 +11,18 @@ import { CommonModule } from '@angular/common';
 })
 export class HeaderComponent {
   scrolled = false;
+  menuAbierto = false;
 
   @HostListener('window:scroll')
   onScroll() {
     this.scrolled = window.scrollY > 20;
+  }
+
+  toggleMenu() {
+    this.menuAbierto = !this.menuAbierto;
+  }
+
+  cerrarMenu() {
+    this.menuAbierto = false;
   }
 }

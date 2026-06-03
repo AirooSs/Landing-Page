@@ -64,10 +64,10 @@
 .nav-menu a {
     color: var(--color-texto-suave);
     text-decoration: none;
-    font-size: 14px;
-    font-weight: 400;
-    padding: 7px 14px;
-    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 12px 20px;
+    border-radius: 10px;
     transition: all 0.2s;
 }
 
@@ -109,4 +109,119 @@
 
 .cta-btn:hover i {
     transform: translateX(3px);
+}
+
+/* =============================
+   HAMBURGUESA (oculta en desktop)
+   ============================= */
+.hamburguesa {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--color-borde);
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 0;
+    transition: background 0.2s;
+}
+
+.hamburguesa span {
+    display: block;
+    width: 18px;
+    height: 2px;
+    background: var(--color-texto);
+    border-radius: 2px;
+    transition: all 0.25s ease;
+    transform-origin: center;
+}
+
+.hamburguesa.activo span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.hamburguesa.activo span:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
+}
+
+.hamburguesa.activo span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+.nav-cta-movil {
+    display: none;
+}
+
+/* =============================
+   RESPONSIVE MÓVIL
+   ============================= */
+@media (max-width: 768px) {
+    .hamburguesa {
+        display: flex;
+    }
+
+    .cta-desktop {
+        display: none;
+    }
+
+    .nav-cta-movil {
+        display: block;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(8, 8, 16, 0.97);
+        backdrop-filter: blur(24px);
+        -webkit-backdrop-filter: blur(24px);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        z-index: 999;
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(-8px);
+        transition: opacity 0.25s ease, transform 0.25s ease;
+    }
+
+    .nav-menu.abierto {
+        opacity: 1;
+        pointer-events: all;
+        transform: translateY(0);
+    }
+
+    .nav-menu li {
+        width: 100%;
+        max-width: 280px;
+        text-align: center;
+    }
+
+    .nav-menu a {
+        display: block;
+        font-size: 22px;
+        padding: 16px 24px;
+        border-radius: 12px;
+    }
+
+    .nav-cta-movil .cta-btn {
+        display: flex;
+        justify-content: center;
+        margin-top: 16px;
+        width: 100%;
+        font-size: 16px;
+        padding: 14px 24px;
+    }
+
+    .navbar {
+        z-index: 1001;
+    }
 }

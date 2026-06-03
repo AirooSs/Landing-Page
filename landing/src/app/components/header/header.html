@@ -1,29 +1,41 @@
 <nav class="navbar" [class.scrolled]="scrolled">
     <div class="navbar-inner">
 
-        <a class="logo" routerLink="/home">
+        <a class="logo" routerLink="/home" (click)="cerrarMenu()">
             <span class="logo-icono">FJ</span>
             <span class="logo-texto">Soria</span>
         </a>
 
-        <ul class="nav-menu">
+        <ul class="nav-menu" [class.abierto]="menuAbierto">
             <li>
-                <a routerLink="/home" routerLinkActive="activo" [routerLinkActiveOptions]="{exact:true}">
+                <a routerLink="/home" routerLinkActive="activo" [routerLinkActiveOptions]="{exact:true}"
+                    (click)="cerrarMenu()">
                     Sobre mí
                 </a>
             </li>
             <li>
-                <a routerLink="/proyectos" routerLinkActive="activo">
+                <a routerLink="/proyectos" routerLinkActive="activo" (click)="cerrarMenu()">
                     Proyectos
                 </a>
             </li>
-            
+            <li class="nav-cta-movil">
+                <a routerLink="/contacto" class="cta-btn" (click)="cerrarMenu()">
+                    <span>Contacto</span>
+                    <i class="bi bi-arrow-right"></i>
+                </a>
+            </li>
         </ul>
 
-        <a routerLink="/contacto" class="cta-btn">
+        <a routerLink="/contacto" class="cta-btn cta-desktop">
             <span>Contacto</span>
             <i class="bi bi-arrow-right"></i>
         </a>
+
+        <button class="hamburguesa" (click)="toggleMenu()" [class.activo]="menuAbierto" aria-label="Menú">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
 
     </div>
 </nav>

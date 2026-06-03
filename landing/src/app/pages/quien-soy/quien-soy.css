@@ -1,8 +1,8 @@
 .hero {
     min-height: calc(100vh - 73px);
     display: flex;
-    align-items: center;
-    padding: 80px 24px;
+    align-items: flex-start;
+    padding: 30px 24px 60px;
     position: relative;
     overflow: hidden;
 }
@@ -239,17 +239,17 @@
 }
 
 .hero-visual {
-    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: aparecer 0.6s ease 0.2s both;
+
+    transform: translateY(-50px);
 }
 
 .avatar-wrapper {
     position: relative;
-    width: 320px;
-    height: 320px;
+    width: 280px;
+    height: 280px;
 }
 
 .avatar-anillo {
@@ -364,4 +364,114 @@
     height: 100%;
     object-fit: cover;
     object-position: center top;
+}
+
+.cv-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.btn-cv {
+    display: inline-flex;
+    align-items: center;
+    gap: .75rem;
+
+    padding: .9rem 1.5rem;
+
+    border-radius: 12px;
+    text-decoration: none;
+
+    color: var(--color-texto);
+    font-weight: 600;
+
+    background: rgba(255, 255, 255, .05);
+    border: 1px solid var(--color-borde);
+
+    transition: all .25s ease;
+}
+
+.btn-cv:hover {
+    transform: translateY(-3px);
+    background: rgba(255, 255, 255, .08);
+    border-color: rgba(99, 102, 241, .4);
+}
+
+/* =============================
+   RESPONSIVE MÓVIL
+   ============================= */
+@media (max-width: 768px) {
+    .hero {
+        padding: 24px 20px 48px;
+        align-items: flex-start;
+    }
+
+    .hero-contenedor {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .hero-visual {
+        transform: none;
+        order: -1;
+    }
+
+    .avatar-wrapper {
+        width: 200px;
+        height: 200px;
+    }
+
+    .linea-1,
+    .linea-2 {
+        font-size: 38px;
+    }
+
+    .linea-acento {
+        font-size: 26px;
+    }
+
+    .hero-descripcion {
+        font-size: 15px;
+    }
+
+    .hero-acciones {
+        flex-wrap: wrap;
+    }
+
+    .btn-primario,
+    .btn-secundario {
+        font-size: 13px;
+        padding: 11px 16px;
+    }
+
+    .hero-skills {
+        gap: 8px;
+    }
+
+    .skill-tag {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .linea-1,
+    .linea-2 {
+        font-size: 32px;
+    }
+
+    .linea-acento {
+        font-size: 22px;
+    }
+
+    .hero-acciones {
+        gap: 8px;
+    }
+
+    .btn-primario,
+    .btn-secundario {
+        flex: 1;
+        justify-content: center;
+    }
 }

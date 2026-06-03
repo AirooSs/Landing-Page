@@ -57,6 +57,62 @@
             }
 
         </div>
+        <div class="separador">
+            <p class="card-descripcion" text align="center">
+                Imágenes del proyecto RETO de venta de entradas para conciertos
+            </p>
+        </div>
+
+        <div class="galeria-proyectos">
+            <div class="slider-track">
+                <img src="/RETO/portada.png" alt="Portada" (click)="abrirImagen('/RETO/portada.png')">
+                <img src="/RETO/artistas.png" alt="Artistas" (click)="abrirImagen('/RETO/artistas.png')">
+                <img src="/RETO/destacados.png" alt="Destacados" (click)="abrirImagen('/RETO/destacados.png')">
+                <img src="/RETO/venta_de_entradas.png" alt="Venta de entradas"
+                    (click)="abrirImagen('/RETO/venta_de_entradas.png')">
+                <img src="/RETO/inicio_de_sesion.png" alt="Inicio de sesión"
+                    (click)="abrirImagen('/RETO/inicio_de_sesion.png')">
+
+                <!-- Duplicadas para efecto infinito -->
+                <img src="/RETO/portada.png" alt="Portada" (click)="abrirImagen('/RETO/portada.png')">
+                <img src="/RETO/artistas.png" alt="Artistas" (click)="abrirImagen('/RETO/artistas.png')">
+                <img src="/RETO/destacados.png" alt="Destacados" (click)="abrirImagen('/RETO/destacados.png')">
+                <img src="/RETO/venta_de_entradas.png" alt="Venta de entradas"
+                    (click)="abrirImagen('/RETO/venta_de_entradas.png')">
+                <img src="/RETO/inicio_de_sesion.png" alt="Inicio de sesión"
+                    (click)="abrirImagen('/RETO/inicio_de_sesion.png')">
+            </div>
+        </div>
+
+        <div class="separador">
+            <p class="card-descripcion" text align="center">
+                Imágenes del proyecto TFC - Tienda de Ropa Online
+            </p>
+        </div>
+
+        <div class="galeria-proyectos">
+            <div class="slider-track">
+                <img src="/TFC/Inicio.png" alt="Inicio" (click)="abrirImagen('/TFC/Inicio.png')">
+                <img src="/TFC/Catalogo.png" alt="Catalogo" (click)="abrirImagen('/TFC/Catalogo.png')">
+                <img src="/TFC/favoritos_y_carrito.png" alt="Favoritos y Carrito"
+                    (click)="abrirImagen('/TFC/favoritos_y_carrito.png')">
+                <img src="/TFC/Producto.png" alt="Producto" (click)="abrirImagen('/TFC/Producto.png')">
+                <img src="/TFC/Carrito.png" alt="Carrito" (click)="abrirImagen('/TFC/Carrito.png')">
+
+                <img src="/TFC/Inicio.png" alt="Inicio" (click)="abrirImagen('/TFC/Inicio.png')">
+                <img src="/TFC/Catalogo.png" alt="Catalogo" (click)="abrirImagen('/TFC/Catalogo.png')">
+                <img src="/TFC/favoritos_y_carrito.png" alt="Favoritos y Carrito"
+                    (click)="abrirImagen('/TFC/favoritos_y_carrito.png')">
+                <img src="/TFC/Producto.png" alt="Producto" (click)="abrirImagen('/TFC/Producto.png')">
+                <img src="/TFC/Carrito.png" alt="Carrito" (click)="abrirImagen('/TFC/Carrito.png')">
+            </div>
+        </div>
+
+        @if (imagenSeleccionada) {
+        <div class="modal-imagen" (click)="cerrarImagen()">
+            <img [src]="imagenSeleccionada" alt="Vista ampliada" (click)="$event.stopPropagation()">
+        </div>
+        }
 
     </div>
 

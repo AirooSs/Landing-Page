@@ -267,3 +267,135 @@
         transform: translateY(0);
     }
 }
+
+.galeria-proyectos {
+    overflow: hidden;
+    margin-top: 5rem;
+    width: 100%;
+    mask-image: linear-gradient(to right,
+            transparent,
+            black 10%,
+            black 90%,
+            transparent);
+}
+
+.slider-track {
+    display: flex;
+    gap: 2rem;
+    width: max-content;
+    animation: scroll 50s linear infinite;
+}
+
+.slider-track img {
+    width: 350px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform .5s ease;
+}
+
+.slider-track img:hover {
+    transform: scale(1.05);
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+.slider-track img {
+    cursor: pointer;
+}
+
+.modal-imagen {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    backdrop-filter: blur(4px);
+}
+
+.modal-imagen img {
+    max-width: 90vw;
+    max-height: 90vh;
+    border-radius: 16px;
+    animation: zoom .25s ease;
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(.8);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.separador {
+    display: flex;
+    justify-content: center;
+    margin: 3rem 0 2rem;
+}
+
+/* =============================
+   RESPONSIVE MÓVIL
+   ============================= */
+@media (max-width: 900px) {
+    .proyectos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .proyectos {
+        padding: 48px 20px;
+    }
+
+    .proyectos-titulo {
+        font-size: 34px;
+    }
+
+    .proyectos-cabecera {
+        margin-bottom: 40px;
+    }
+
+    .proyectos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .slider-track img {
+        width: 260px;
+        height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .proyectos-titulo {
+        font-size: 28px;
+    }
+
+    .proyectos-subtitulo {
+        font-size: 14px;
+    }
+
+    .proyecto-card {
+        padding: 20px;
+    }
+
+    .slider-track img {
+        width: 220px;
+        height: 130px;
+    }
+}
