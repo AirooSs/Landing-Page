@@ -107,6 +107,30 @@
                 <img src="/TFC/Carrito.png" alt="Carrito" (click)="abrirImagen('/TFC/Carrito.png')">
             </div>
         </div>
+        <div class="separador">
+            <p class="card-descripcion" text align="center">
+                Imágenes del proyecto Gestión de Tareas — API Hexagonal
+            </p>
+        </div>
+
+        <div class="galeria-proyectos">
+            <div class="slider-track">
+                <img src="/Hexagonal/Arquitectura.PNG" alt="Arquitectura Hexagonal"
+                    (click)="abrirImagen('/Hexagonal/Arquitectura.PNG')">
+                <img src="/Hexagonal/estructura.PNG" alt="Estructura del proyecto"
+                    (click)="abrirImagen('/Hexagonal/estructura.PNG')">
+                <img src="/Hexagonal/repo.PNG" alt="Repositorio GitHub" (click)="abrirImagen('/Hexagonal/repo.PNG')">
+                <img src="/Hexagonal/swagger.PNG" alt="Swagger UI" (click)="abrirImagen('/Hexagonal/swagger.PNG')">
+
+                <!-- Duplicadas para efecto infinito -->
+                <img src="/Hexagonal/Arquitectura.PNG" alt="Arquitectura Hexagonal"
+                    (click)="abrirImagen('/Hexagonal/Arquitectura.PNG')">
+                <img src="/Hexagonal/estructura.PNG" alt="Estructura del proyecto"
+                    (click)="abrirImagen('/Hexagonal/estructura.PNG')">
+                <img src="/Hexagonal/repo.PNG" alt="Repositorio GitHub" (click)="abrirImagen('/Hexagonal/repo.PNG')">
+                <img src="/Hexagonal/swagger.PNG" alt="Swagger UI" (click)="abrirImagen('/Hexagonal/swagger.PNG')">
+            </div>
+        </div>
 
         @if (imagenSeleccionada) {
         <div class="modal-imagen" (click)="cerrarImagen()">

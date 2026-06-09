@@ -3,6 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import {  HeaderComponent } from "./components/header/header";
 import { FooterComponent } from "./components/footer/footer";
 
+//Actualizo el app.ts
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet, HeaderComponent, FooterComponent],
