@@ -12,8 +12,8 @@ export class ProyectosComponent {
 
   proyectos = [
     {
-      nombre: 'Gestión de Tareas — API Hexagonal',
-      descripcion: 'API REST de gestión de tareas construida con Arquitectura Hexagonal y DDD. Incluye usuarios, proyectos y tareas con casos de uso independientes, tests unitarios con JUnit y Mockito, validaciones y documentación con Swagger.',
+      nombre: 'Gestion de Tareas - API Hexagonal',
+      descripcion: 'API REST de gestion de tareas construida con Arquitectura Hexagonal y DDD. Incluye usuarios, proyectos y tareas con casos de uso independientes, tests unitarios con JUnit y Mockito, validaciones y documentacion con Swagger.',
       tipo: 'Backend',
       tags: ['Java', 'Spring Boot', 'PostgreSQL', 'JPA', 'JUnit', 'Mockito', 'Swagger', 'DDD'],
       icono: 'bi-diagram-3',
@@ -23,7 +23,7 @@ export class ProyectosComponent {
     },
     {
       nombre: 'Reto Transversal UNIR',
-      descripcion: 'Aplicación fullstack de reservas para conciertos desarrollada como proyecto grupal para UNIR. Gestión de eventos, reservas y usuarios con Angular en frontend y Spring Boot + MySQL en backend.',
+      descripcion: 'Aplicacion fullstack de reservas para conciertos desarrollada como proyecto grupal para UNIR. Gestion de eventos, reservas y usuarios con Angular en frontend y Spring Boot + MySQL en backend.',
       tipo: 'Fullstack',
       tags: ['Angular', 'Spring Boot', 'Java', 'MySQL', 'TypeScript'],
       icono: 'bi-music-note-beamed',
@@ -33,7 +33,7 @@ export class ProyectosComponent {
     },
     {
       nombre: 'TFC - Tienda de Ropa Online',
-      descripcion: 'Aplicación fullstack para la organización de una tienda de ropa online. Frontend en Angular con Backend en Bootstrap consumiendo una API REST con operaciones CRUD completas y componentes reutilizables.',
+      descripcion: 'Aplicacion fullstack para la organizacion de una tienda de ropa online. Frontend en Angular con Backend en Bootstrap consumiendo una API REST con operaciones CRUD completas y componentes reutilizables.',
       tipo: 'Fullstack',
       tags: ['Angular', 'Bootstrap', 'TypeScript'],
       icono: 'bi-box-seam',
@@ -43,8 +43,8 @@ export class ProyectosComponent {
     },
     {
       nombre: 'Mimesis Lab',
-      descripcion: 'Plataforma clínica de investigación psicológica. Durante las prácticas trabajé en la integración de módulos Python con NestJS, CI/CD con GitHub Actions y la integración de Azure OpenAI (GPT y Whisper), a su vez integrado con el HPC de Castilla y León.',
-      tipo: 'Prácticas fullstack',
+      descripcion: 'Plataforma clinica de investigacion psicologica. Durante las practicas trabaje en la integracion de modulos Python con NestJS, CI/CD con GitHub Actions y la integracion de Azure OpenAI (GPT y Whisper), a su vez integrado con el HPC de Castilla y Leon.',
+      tipo: 'Practicas fullstack',
       tags: ['Angular', 'NestJS', 'Node.js', 'PostgreSQL', 'Azure'],
       icono: 'bi-building',
       color: 'morado',
