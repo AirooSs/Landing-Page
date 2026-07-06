@@ -1,41 +1,23 @@
-<nav class="navbar" [class.scrolled]="scrolled">
-    <div class="navbar-inner">
+<header class="navbar" [class.scrolled]="scrolled">
+    <div class="nav-inner">
 
-        <a class="logo" routerLink="/home" (click)="cerrarMenu()">
-            <span class="logo-icono">FJ</span>
-            <span class="logo-texto">Soria</span>
+        <a class="logo" (click)="ir('inicio')">
+            <span class="logo-sq">FJ</span>
+            <span class="logo-name">Soria</span>
         </a>
-
-        <ul class="nav-menu" [class.abierto]="menuAbierto">
-            <li>
-                <a routerLink="/home" routerLinkActive="activo" [routerLinkActiveOptions]="{exact:true}"
-                    (click)="cerrarMenu()">
-                    Sobre mí
-                </a>
-            </li>
-            <li>
-                <a routerLink="/proyectos" routerLinkActive="activo" (click)="cerrarMenu()">
-                    Proyectos
-                </a>
-            </li>
-            <li class="nav-cta-movil">
-                <a routerLink="/contacto" class="cta-btn" (click)="cerrarMenu()">
-                    <span>Contacto</span>
-                    <i class="bi bi-arrow-right"></i>
-                </a>
-            </li>
+        <ul class="nav-links" [class.open]="menuAbierto">
+            <li><a (click)="ir('inicio')" [class.activo]="seccionActiva === 'inicio'">Sobre mí</a></li>
+            <li><a (click)="ir('proyectos')" [class.activo]="seccionActiva === 'proyectos'">Proyectos</a></li>
+            <li><a (click)="ir('contacto')" [class.activo]="seccionActiva === 'contacto'">Contacto</a></li>
         </ul>
 
-        <a routerLink="/contacto" class="cta-btn cta-desktop">
-            <span>Contacto</span>
-            <i class="bi bi-arrow-right"></i>
-        </a>
+        <a (click)="ir('contacto')" class="nav-cta">Contacto</a>
 
-        <button class="hamburguesa" (click)="toggleMenu()" [class.activo]="menuAbierto" aria-label="Menú">
-            <span></span>
-            <span></span>
-            <span></span>
+        <button class="burger" (click)="toggle()" [class.open]="menuAbierto" aria-label="Menú">
+            <span></span><span></span><span></span>
         </button>
 
     </div>
-</nav>
+</header>
+
+<div class="nav-overlay" [class.visible]="menuAbierto" (click)="toggle()"></div>

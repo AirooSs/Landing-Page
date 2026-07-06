@@ -1,58 +1,45 @@
 <footer class="footer">
 
-    <div class="footer-cuerpo">
+    <div class="footer-body">
 
-        <div class="footer-marca">
+        <div class="footer-brand">
             <div class="footer-logo">
-                <span class="logo-icono">FJ</span>
-                <span class="logo-texto">Francisco José Soria</span>
+                <span class="logo-sq">FJ</span>
+                <span class="logo-name">Francisco Soria</span>
             </div>
-            <p class="footer-descripcion">
-                Desarrollador Full Stack especializado en Angular y Java Spring Boot.
-                Apasionado por crear aplicaciones limpias y bien estructuradas.
-            </p>
-            <div class="footer-badge">
-                <span class="pulso"></span>
+            <p>Desarrollador Full Stack especializado en Angular y Java Spring Boot.</p>
+            <div class="avail">
+                <span class="dot"></span>
                 Disponible para proyectos
             </div>
         </div>
 
         <div class="footer-col">
-            <h4 class="footer-titulo">Navegación</h4>
-            <nav class="footer-nav">
-                <a routerLink="/home">Sobre mí</a>
-                <a routerLink="/proyectos">Proyectos</a>
-                <a routerLink="/contacto">Contacto</a>
-            </nav>
+            <h4>Navegación</h4>
+            <a (click)="ir('inicio')" class="link-scroll">Sobre mí</a>
+            <a (click)="ir('proyectos')" class="link-scroll">Proyectos</a>
+            <a (click)="ir('contacto')" class="link-scroll">Contacto</a>
         </div>
 
         <div class="footer-col">
-            <h4 class="footer-titulo">Encuéntrame</h4>
-            <div class="footer-redes">
-                <a href="https://www.linkedin.com/in/fran-soria-nav/" class="red-social" target="_blank">
-                    <i class="bi bi-linkedin"></i>
-                    <span>LinkedIn</span>
-                    <i class="bi bi-arrow-up-right flecha"></i>
-                </a>
-                <a href="https://github.com/AirooSs" class="red-social" target="_blank">
-                    <i class="bi bi-github"></i>
-                    <span>GitHub</span>
-                    <i class="bi bi-arrow-up-right flecha"></i>
-                </a>
-                <a href="mailto:franciscosorianavarrete@gmail.com" class="red-social">
-                    <i class="bi bi-envelope"></i>
-                    <span>Email</span>
-                    <i class="bi bi-arrow-up-right flecha"></i>
-                </a>
-            </div>
+            <h4>Encuéntrame</h4>
+            <a href="https://www.linkedin.com/in/fran-soria-nav/" target="_blank">
+                <i class="bi bi-linkedin"></i> LinkedIn
+            </a>
+            <a href="https://github.com/AirooSs" target="_blank">
+                <i class="bi bi-github"></i> GitHub
+            </a>
+            <a href="https://mail.google.com/mail/?view=cm&to=franciscosorianavarrete@gmail.com" target="_blank">
+                <i class="bi bi-envelope"></i> Email
+            </a>
         </div>
 
     </div>
 
-    <div class="footer-inferior">
-        <span>© 2026 Francisco José Soria. Hecho con Angular.</span>
-        <span class="footer-tech">
-            <i class="bi bi-lightning-charge-fill"></i>
+    <div class="footer-bottom">
+        <span>2026 Francisco José Soria. Hecho con Angular.</span>
+        <span class="footer-stack">
+            <span class="stack-dot"></span>
             Angular + Spring Boot
         </span>
     </div>

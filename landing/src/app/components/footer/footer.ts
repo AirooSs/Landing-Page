@@ -1,11 +1,17 @@
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [RouterModule],
+  imports: [],
   templateUrl: './footer.html',
   styleUrl: './footer.css'
 })
-export class FooterComponent { }
+
+//Agregamos metodo para hacer scroll a la seccion correspondiente
+export class FooterComponent {
+  ir(id: string) {
+    const el = document.getElementById(id);
+    if (el) el.scrollIntoView({ behavior: 'smooth' });
+  }
+}

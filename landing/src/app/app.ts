@@ -1,12 +1,13 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import {  HeaderComponent } from "./components/header/header";
-import { FooterComponent } from "./components/footer/footer";
+import { HeaderComponent } from './components/header/header';
+import { FooterComponent } from './components/footer/footer';
+import { QuienSoyComponent } from './pages/quien-soy/quien-soy';
+import { ProyectosComponent } from './pages/proyectos/proyectos';
+import { ContactoComponent } from './pages/contacto/contacto';
 
-//Actualizo el app.ts
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, HeaderComponent, FooterComponent],
+  imports: [HeaderComponent, FooterComponent, QuienSoyComponent, ProyectosComponent, ContactoComponent],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
