@@ -41,18 +41,17 @@
     max-width: 460px;
 }
 
-.cards-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 12px;
-    margin-bottom: 64px;
+.lista-proyectos {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 
 .card {
     background: var(--bg-2);
     border: 1px solid var(--border);
     border-radius: 20px;
-    padding: 24px;
+    padding: 28px;
     display: flex;
     flex-direction: column;
     gap: 14px;
@@ -107,7 +106,7 @@
 }
 
 .card-name {
-    font-size: 15px;
+    font-size: 17px;
     font-weight: 600;
     color: var(--t1);
     letter-spacing: -0.4px;
@@ -115,11 +114,11 @@
 }
 
 .card-desc {
-    font-size: 13px;
+    font-size: 13.5px;
     color: var(--t2);
     line-height: 1.65;
     letter-spacing: -0.05px;
-    flex: 1;
+    max-width: 640px;
 }
 
 .card-tags {
@@ -166,22 +165,10 @@
     font-size: 13px;
 }
 
-/* Galerias */
-.galeria-label {
+.galeria-hint-row {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 48px 0 16px;
-}
-
-.galeria-label-left {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 14px;
-    font-weight: 500;
-    color: var(--t1);
-    letter-spacing: -0.2px;
+    justify-content: flex-end;
+    margin-top: 4px;
 }
 
 .galeria-hint {
@@ -206,40 +193,30 @@
 
 .galeria.dragging {
     cursor: grabbing;
-    user-select: none;
 }
 
 .galeria-track {
     display: flex;
     gap: 12px;
-    padding: 8px 16px 12px;
+    padding: 4px 4px 8px;
     width: max-content;
 }
 
 .galeria-track img {
-    width: 320px;
-    height: 200px;
+    width: 300px;
+    height: 188px;
     object-fit: cover;
     border-radius: 14px;
     border: 1px solid var(--border);
     flex-shrink: 0;
-    transition: border-color 0.2s;
-}
-
-.galeria-track img {
     cursor: zoom-in;
-}
-
-
-.galeria.dragging .galeria-track img {
-    pointer-events: auto;
+    transition: border-color 0.2s;
 }
 
 .galeria-track img:hover {
     border-color: var(--border-mid);
 }
 
-/* Modal */
 .modal {
     position: fixed;
     inset: 0;
@@ -292,13 +269,6 @@
     background: rgba(255, 255, 255, 0.15);
 }
 
-/* Responsive */
-@media (max-width: 900px) {
-    .cards-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
 @media (max-width: 600px) {
     .proyectos {
         padding: 56px 20px;
@@ -309,13 +279,13 @@
         letter-spacing: -1.4px;
     }
 
-    .cards-grid {
-        grid-template-columns: 1fr;
+    .card {
+        padding: 20px;
     }
 
     .galeria-track img {
-        width: 260px;
-        height: 162px;
+        width: 240px;
+        height: 150px;
     }
 
     .galeria-hint {

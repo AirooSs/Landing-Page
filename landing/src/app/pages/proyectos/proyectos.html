@@ -1,62 +1,63 @@
 <section class="proyectos">
 
-    <div class="proy-header">
-        <span class="eyebrow">Proyectos</span>
-        <h1 class="proy-titulo">Lo que he construido</h1>
-        <p class="proy-sub">Proyectos académicos, personales y de prácticas. Cada uno representa algo aprendido de
-            verdad.</p>
-    </div>
+  <div class="proy-header">
+    <span class="eyebrow">Proyectos</span>
+    <h1 class="proy-titulo">Lo que he construido</h1>
+    <p class="proy-sub">Proyectos académicos, personales y de prácticas. Cada uno representa algo aprendido de verdad.</p>
+  </div>
 
-    <div class="cards-grid">
-        @for (p of proyectos; track p.nombre) {
-        <div class="card">
-            <div class="card-top">
-                <div class="card-icon" [class]="'icon-' + p.color">
-                    <i class="bi" [class]="p.icono"></i>
-                </div>
-                <span class="chip">{{ p.tipo }}</span>
-            </div>
-            <h3 class="card-name">{{ p.nombre }}</h3>
-            <p class="card-desc">{{ p.descripcion }}</p>
-            <div class="card-tags">
-                @for (tag of p.tags; track tag) {
-                <span class="tag">{{ tag }}</span>
-                }
-            </div>
-            <div class="card-foot">
-                @if (p.github) {
-                <a [href]="p.github" target="_blank" class="card-link">
-                    <i class="bi bi-github"></i> Ver repositorio <i class="bi bi-arrow-up-right"></i>
-                </a>
-                } @else {
-                <span class="card-lock"><i class="bi bi-lock"></i> Repositorio privado</span>
-                }
-            </div>
+  <div class="lista-proyectos">
+    @for (p of proyectos; track p.nombre) {
+      <div class="card">
+
+        <div class="card-top">
+          <div class="card-icon" [class]="'icon-' + p.color">
+            <i class="bi" [class]="p.icono"></i>
+          </div>
+          <span class="chip">{{ p.tipo }}</span>
         </div>
+
+        <h3 class="card-name">{{ p.nombre }}</h3>
+        <p class="card-desc">{{ p.descripcion }}</p>
+
+        <div class="card-tags">
+          @for (tag of p.tags; track tag) {
+            <span class="tag">{{ tag }}</span>
+          }
+        </div>
+
+        <div class="card-foot">
+          @if (p.github) {
+            <a [href]="p.github" target="_blank" class="card-link">
+              <i class="bi bi-github"></i> Ver repositorio <i class="bi bi-arrow-up-right"></i>
+            </a>
+          } @else {
+            <span class="card-lock"><i class="bi bi-lock"></i> Repositorio privado</span>
+          }
+        </div>
+
+        @if (p.imgs.length > 0) {
+          <div class="galeria-hint-row">
+            <span class="galeria-hint">Arrastra para explorar</span>
+          </div>
+          <div class="galeria" #galeria>
+            <div class="galeria-track">
+              @for (img of p.imgs; track img.src) {
+                <img [src]="img.src" [alt]="img.alt" (click)="abrir(img.src)" loading="lazy">
+              }
+            </div>
+          </div>
         }
-    </div>
 
-    @for (g of galerias; track g.titulo) {
-    <div class="galeria-label">
-        <span class="galeria-label-left">
-            <i class="bi" [class]="g.icono"></i> {{ g.titulo }}
-        </span>
-        <span class="galeria-hint">Arrastra para explorar</span>
-    </div>
-    <div class="galeria" #galeria>
-        <div class="galeria-track">
-            @for (img of g.imgs; track img.src) {
-            <img [src]="img.src" [alt]="img.alt" (click)="abrir(img.src)" loading="lazy">
-            }
-        </div>
-    </div>
+      </div>
     }
+  </div>
 
-    @if (imagenSeleccionada) {
+  @if (imagenSeleccionada) {
     <div class="modal" (click)="cerrar()">
-        <img [src]="imagenSeleccionada" alt="Vista ampliada" (click)="$event.stopPropagation()">
-        <button class="modal-close" (click)="cerrar()"><i class="bi bi-x-lg"></i></button>
+      <img [src]="imagenSeleccionada" alt="Vista ampliada" (click)="$event.stopPropagation()">
+      <button class="modal-close" (click)="cerrar()"><i class="bi bi-x-lg"></i></button>
     </div>
-    }
+  }
 
 </section>

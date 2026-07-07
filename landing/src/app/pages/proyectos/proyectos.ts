@@ -20,7 +20,13 @@ export class ProyectosComponent implements AfterViewInit {
       tags: ['React', 'Vite', 'Java', 'Spring Boot', 'PostgreSQL'],
       icono: 'bi-layout-split',
       color: 'blue',
-      github: 'https://github.com/AirooSs/gestion-tareas-fullstack'
+      github: 'https://github.com/AirooSs/gestion-tareas-fullstack',
+      imgs: [
+        { src: '/gestion_tareas_fullstack/Inicio.PNG', alt: 'Inicio' },
+        { src: '/gestion_tareas_fullstack/crear_tarea.PNG', alt: 'Crear tarea' },
+        { src: '/gestion_tareas_fullstack/tarea_creada.PNG', alt: 'Tarea creada' },
+        { src: '/gestion_tareas_fullstack/estructura_backend.PNG', alt: 'Estructura del backend' }
+      ]
     },
     {
       nombre: 'Gestión de Tareas — API Hexagonal',
@@ -29,41 +35,22 @@ export class ProyectosComponent implements AfterViewInit {
       tags: ['Java', 'Spring Boot', 'PostgreSQL', 'JUnit', 'Mockito', 'Swagger'],
       icono: 'bi-diagram-3',
       color: 'blue',
-      github: 'https://github.com/AirooSs/Gestion-tareas-hexagonal'
+      github: 'https://github.com/AirooSs/Gestion-tareas-hexagonal',
+      imgs: [
+        { src: '/Hexagonal/Arquitectura.PNG', alt: 'Arquitectura' },
+        { src: '/Hexagonal/estructura.PNG', alt: 'Estructura' },
+        { src: '/Hexagonal/repo.PNG', alt: 'Repositorio' },
+        { src: '/Hexagonal/swagger.PNG', alt: 'Swagger' }
+      ]
     },
     {
-      nombre: 'Plataforma de Reservas para Conciertos',
+      nombre: 'Reto Transversal UNIR',
       descripcion: 'Plataforma fullstack de reservas para conciertos. Angular en frontend, Spring Boot + MySQL en backend.',
       tipo: 'Fullstack',
       tags: ['Angular', 'Spring Boot', 'Java', 'MySQL', 'TypeScript'],
       icono: 'bi-music-note-beamed',
       color: 'green',
-      github: 'https://github.com/AirooSs/Reto_Transversal_UNIR'
-    },
-    {
-      nombre: 'TFC — Tienda de Ropa Online',
-      descripcion: 'E-commerce con Angular en frontend y Spring Boot + MySQL en backend. Carrito, favoritos,seguridad JWT y gestión con Swagger.',
-      tipo: 'Fullstack',
-      tags: ['Angular', 'Spring Boot', 'Java', 'MySQL', 'Bootstrap'],
-      icono: 'bi-bag',
-      color: 'green',
-      github: 'https://github.com/AirooSs/TFC-Tienda-de-ropa'
-    },
-    {
-      nombre: 'Prácticas FullStack Mimesis Lab',
-      descripcion: 'Plataforma clínica real. NestJS, Azure OpenAI (GPT y Whisper), CI/CD con GitHub Actions y conexión con el HPC de Castilla y León.',
-      tipo: 'Prácticas',
-      tags: ['Angular', 'NestJS', 'Node.js', 'PostgreSQL', 'Azure', 'Python'],
-      icono: 'bi-building',
-      color: 'purple',
-      github: null
-    }
-  ];
-
-  galerias = [
-    {
-      titulo: 'Plataforma de Reservas para Conciertos',
-      icono: 'bi-music-note-beamed',
+      github: 'https://github.com/AirooSs/Reto_Transversal_UNIR',
       imgs: [
         { src: '/RETO/portada.png', alt: 'Portada' },
         { src: '/RETO/artistas.png', alt: 'Artistas' },
@@ -73,8 +60,13 @@ export class ProyectosComponent implements AfterViewInit {
       ]
     },
     {
-      titulo: 'TFC — Tienda de Ropa Online',
+      nombre: 'TFC — Tienda de Ropa Online',
+      descripcion: 'E-commerce con Angular en frontend y Spring Boot + MySQL en backend. Carrito, favoritos y gestión con Swagger.',
+      tipo: 'Fullstack',
+      tags: ['Angular', 'Spring Boot', 'Java', 'MySQL', 'Bootstrap'],
       icono: 'bi-bag',
+      color: 'green',
+      github: 'https://github.com/AirooSs/TFC-Tienda-de-ropa',
       imgs: [
         { src: '/TFC/Inicio.png', alt: 'Inicio' },
         { src: '/TFC/Catalogo.png', alt: 'Catálogo' },
@@ -84,14 +76,14 @@ export class ProyectosComponent implements AfterViewInit {
       ]
     },
     {
-      titulo: 'Gestión de Tareas — Arquitectura Hexagonal en Java SpringBoot',
-      icono: 'bi-diagram-3',
-      imgs: [
-        { src: '/Hexagonal/Arquitectura.PNG', alt: 'Arquitectura' },
-        { src: '/Hexagonal/estructura.PNG', alt: 'Estructura' },
-        { src: '/Hexagonal/repo.PNG', alt: 'Repositorio' },
-        { src: '/Hexagonal/swagger.PNG', alt: 'Swagger' }
-      ]
+      nombre: 'Mimesis Lab',
+      descripcion: 'Plataforma clínica real. NestJS, Azure OpenAI (GPT y Whisper), CI/CD con GitHub Actions y conexión con el HPC de Castilla y León.',
+      tipo: 'Prácticas',
+      tags: ['Angular', 'NestJS', 'Node.js', 'PostgreSQL', 'Azure', 'Python'],
+      icono: 'bi-building',
+      color: 'purple',
+      github: null,
+      imgs: [] as { src: string, alt: string }[]
     }
   ];
 
