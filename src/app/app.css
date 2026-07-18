@@ -1,0 +1,14 @@
+.layout {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.contenido {
+    flex: 1;
+}
+
+section {
+    display: block;
+    scroll-margin-top: 60px;
+}

@@ -1,0 +1,23 @@
+<header class="navbar" [class.scrolled]="scrolled">
+    <div class="nav-inner">
+
+        <a class="logo" (click)="ir('inicio')">
+            <span class="logo-sq">FJ</span>
+            <span class="logo-name">Soria</span>
+        </a>
+        <ul class="nav-links" [class.open]="menuAbierto">
+            <li><a (click)="ir('inicio')" [class.activo]="seccionActiva === 'inicio'">Sobre mí</a></li>
+            <li><a (click)="ir('proyectos')" [class.activo]="seccionActiva === 'proyectos'">Proyectos</a></li>
+            <li><a (click)="ir('contacto')" [class.activo]="seccionActiva === 'contacto'">Contacto</a></li>
+        </ul>
+
+        <a (click)="ir('contacto')" class="nav-cta">Contacto</a>
+
+        <button class="burger" (click)="toggle()" [class.open]="menuAbierto" aria-label="Menú">
+            <span></span><span></span><span></span>
+        </button>
+
+    </div>
+</header>
+
+<div class="nav-overlay" [class.visible]="menuAbierto" (click)="toggle()"></div>
